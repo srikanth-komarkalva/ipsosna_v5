@@ -53,6 +53,7 @@ view: shopper_events {
   }
 
   measure: price_sum {
+    value_format_name: decimal_2
     label: "Price"
     type: number
     sql: sum(${price}) ;;
@@ -81,6 +82,7 @@ view: shopper_events {
 
   measure: quantity_sum {
     label: "Quantity"
+    value_format_name: decimal_0
     type: number
     sql: sum(${quantity}) ;;
   }
