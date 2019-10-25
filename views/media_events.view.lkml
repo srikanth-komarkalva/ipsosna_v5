@@ -7,6 +7,7 @@ view: media_events {
   }
 
   dimension: category {
+    hidden: yes
     type: string
     sql: ${TABLE}.Category ;;
   }
@@ -22,6 +23,7 @@ view: media_events {
   }
 
   dimension: device_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.device_key ;;
   }
@@ -42,16 +44,19 @@ view: media_events {
   }
 
   dimension: os_name {
+    hidden: yes
     type: string
     sql: ${TABLE}.OS_Name ;;
   }
 
   dimension: panelist_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.panelist_key ;;
   }
 
   dimension: platform {
+    hidden: yes
     type: string
     sql: ${TABLE}.Platform ;;
   }
@@ -91,6 +96,7 @@ view: media_events {
   }
 
   measure: count {
+    hidden: yes
     type: count
     drill_fields: [os_name]
   }

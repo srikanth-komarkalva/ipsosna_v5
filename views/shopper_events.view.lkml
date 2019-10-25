@@ -47,11 +47,13 @@ view: shopper_events {
   }
 
   dimension: price {
+    hidden: yes
     type: number
     sql: ${TABLE}.Price ;;
   }
 
   measure: price_sum {
+    label: "Price"
     type: number
     sql: sum(${price}) ;;
   }
@@ -72,11 +74,13 @@ view: shopper_events {
   }
 
   dimension: quantity {
+    hidden: yes
     type: number
     sql: ${TABLE}.Quantity ;;
   }
 
   measure: quantity_sum {
+    label: "Quantity"
     type: number
     sql: sum(${quantity}) ;;
   }
@@ -112,6 +116,7 @@ view: shopper_events {
 
   measure: count {
     type: count
+    hidden: yes
     drill_fields: [product_name, os_name]
   }
 }

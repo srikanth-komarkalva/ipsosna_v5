@@ -7,21 +7,25 @@ view: app_events {
   }
 
   dimension: category {
+    hidden: yes
     type: string
     sql: ${TABLE}.category ;;
   }
 
   dimension: device_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.Device_key ;;
   }
 
   dimension: dur_minutes {
+    hidden: yes
     type: number
     sql: ${TABLE}.dur_minutes ;;
   }
 
   dimension: os_name {
+    hidden: yes
     type: string
     sql: ${TABLE}.OS_Name ;;
   }
@@ -32,21 +36,25 @@ view: app_events {
   }
 
   dimension: panelist_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.panelist_key ;;
   }
 
   dimension: platform {
+    hidden: yes
     type: string
     sql: ${TABLE}.Platform ;;
   }
 
   dimension: record_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.Record_ID ;;
   }
 
   dimension: session_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.Session_ID ;;
   }
@@ -66,11 +74,13 @@ view: app_events {
   }
 
   dimension: subcategory {
+    hidden: yes
     type: string
     sql: ${TABLE}.subcategory ;;
   }
 
   dimension: tax_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.Tax_ID ;;
   }

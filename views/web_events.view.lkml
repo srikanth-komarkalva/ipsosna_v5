@@ -2,11 +2,13 @@ view: web_events {
   sql_table_name: z_BDG_Test.web_events ;;
 
   dimension: category {
+    hidden: yes
     type: string
     sql: ${TABLE}.category ;;
   }
 
   dimension: device_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.device_key ;;
   }
@@ -27,26 +29,31 @@ view: web_events {
   }
 
   dimension: os_name {
+    hidden: yes
     type: string
     sql: ${TABLE}.OS_Name ;;
   }
 
   dimension: panelist_key {
+    hidden: yes
     type: number
     sql: ${TABLE}.panelist_key ;;
   }
 
   dimension: platform {
+    hidden: yes
     type: string
     sql: ${TABLE}.Platform ;;
   }
 
   dimension: record_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.Record_ID ;;
   }
 
   dimension: session_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.Session_ID ;;
   }
@@ -77,6 +84,7 @@ view: web_events {
 
   measure: count {
     type: count
+    hidden: yes
     drill_fields: [os_name, domain_name, host_name]
   }
 }
