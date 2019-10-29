@@ -15,7 +15,6 @@ view: shopper_events {
   }
 
   dimension: device_key {
-    primary_key: yes
     type: number
     group_label: "Shopper Events"
     sql: ${TABLE}.device_key ;;
@@ -47,6 +46,7 @@ view: shopper_events {
 
   dimension: panelist_key {
     type: number
+    primary_key: yes
     group_label: "Shopper Events"
     sql: ${TABLE}.panelist_key ;;
   }

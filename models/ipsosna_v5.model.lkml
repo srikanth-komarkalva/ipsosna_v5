@@ -18,21 +18,21 @@ explore: shopper_events {
   join: media_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: one_to_one
-    sql_on: ${shopper_events.device_key} = ${media_events.device_key};;
+    relationship: many_to_one
+    sql_on: ${shopper_events.panelist_key} = ${media_events.panelist_key};;
   }
 
   join: app_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: one_to_one
-    sql_on: ${shopper_events.device_key} = ${app_events.device_key};;
+    relationship: many_to_one
+    sql_on: ${shopper_events.panelist_key} = ${app_events.panelist_key};;
   }
 
   join: web_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: one_to_one
-    sql_on: ${shopper_events.device_key} = ${web_events.device_key};;
+    relationship: many_to_one
+    sql_on: ${shopper_events.panelist_key} = ${web_events.panelist_key};;
   }
 }

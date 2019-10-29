@@ -30,7 +30,7 @@ view: media_events {
   dimension: device_key {
 #     hidden: yes
     type: number
-    primary_key: yes
+#     primary_key: yes
     group_label: "Media Events"
     sql: ${TABLE}.device_key ;;
   }
@@ -73,6 +73,7 @@ view: media_events {
   dimension: panelist_key {
 #     hidden: yes
     type: number
+    primary_key: yes
     group_label: "Media Events"
     sql: ${TABLE}.panelist_key ;;
   }

@@ -11,7 +11,7 @@ view: web_events {
   dimension: device_key {
 #     hidden: yes
     group_label: "Web Events"
-    primary_key: yes
+#     primary_key: yes
     type: number
     sql: ${TABLE}.device_key ;;
   }
@@ -51,6 +51,7 @@ view: web_events {
 
   dimension: panelist_key {
 #     hidden: yes
+    primary_key: yes
     group_label: "Web Events"
     type: number
     sql: ${TABLE}.panelist_key ;;

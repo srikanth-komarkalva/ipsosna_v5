@@ -18,7 +18,6 @@ view: app_events {
   dimension: device_key {
 #     hidden: yes
     group_label: "App Events"
-    primary_key: yes
     type: number
     sql: ${TABLE}.Device_key ;;
   }
@@ -53,6 +52,7 @@ view: app_events {
 
   dimension: panelist_key {
 #     hidden: yes
+    primary_key: yes
     group_label: "App Events"
     type: number
     sql: ${TABLE}.panelist_key ;;
