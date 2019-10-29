@@ -148,7 +148,7 @@ view: shopper_events {
   measure: Panelist_count {
     type: count_distinct
     group_label: "Shopper Events"
-    label: "Count of Panelsits"
+    label: "Count of Panelists"
     sql: ${panelist_key} ;;
 
   }
