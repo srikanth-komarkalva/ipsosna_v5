@@ -1,5 +1,5 @@
 view: app_events {
-  view_label: "App Events"
+#   view_label: "App Events"
   sql_table_name: z_BDG_Test.app_events ;;
 
   dimension: app_name {
@@ -18,15 +18,24 @@ view: app_events {
   dimension: device_key {
 #     hidden: yes
     group_label: "App Events"
+    primary_key: yes
     type: number
     sql: ${TABLE}.Device_key ;;
   }
 
   dimension: dur_minutes {
-#     hidden: yes
+    hidden: yes
     group_label: "App Events"
     type: number
     sql: ${TABLE}.dur_minutes ;;
+  }
+
+  measure: dur_minutes_ {
+    label: "Duration Minutes"
+    type: sum
+    group_label: "App Events"
+    value_format_name: decimal_2
+    sql: ${dur_minutes} ;;
   }
 
   dimension: os_name {

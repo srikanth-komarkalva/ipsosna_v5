@@ -11,6 +11,7 @@ view: web_events {
   dimension: device_key {
 #     hidden: yes
     group_label: "Web Events"
+    primary_key: yes
     type: number
     sql: ${TABLE}.device_key ;;
   }

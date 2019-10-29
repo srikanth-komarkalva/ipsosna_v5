@@ -1,5 +1,5 @@
 view: media_events {
-  view_label: "Media Events"
+#   view_label: "Media Events"
   sql_table_name: z_BDG_Test.media_events ;;
 
   dimension: advert {
@@ -30,6 +30,7 @@ view: media_events {
   dimension: device_key {
 #     hidden: yes
     type: number
+    primary_key: yes
     group_label: "Media Events"
     sql: ${TABLE}.device_key ;;
   }
@@ -42,9 +43,17 @@ view: media_events {
 
   dimension: media_duration {
     type: number
+    hidden: yes
     label: "Media Duration"
     group_label: "Media Events"
     sql: ${TABLE}.MediaDuration ;;
+  }
+
+  measure: media_duration_ {
+    label: "Media Duration"
+    type: sum
+    value_format_name: decimal_2
+    sql: ${media_duration} ;;
   }
 
   dimension: media_id {
@@ -76,9 +85,17 @@ view: media_events {
 
   dimension: play_duration {
     type: number
+    hidden: yes
     label: "Play Duration"
     group_label: "Media Events"
     sql: ${TABLE}.PlayDuration ;;
+  }
+
+  measure: play_duration_ {
+    label: "Play Duration"
+    type: sum
+    value_format_name: decimal_2
+    sql: ${play_duration} ;;
   }
 
   dimension: real_life_media_id {

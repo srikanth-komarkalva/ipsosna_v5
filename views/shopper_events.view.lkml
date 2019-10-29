@@ -1,5 +1,5 @@
 view: shopper_events {
-  view_label: "Shopper Events"
+#   view_label: "Shopper Events"
   sql_table_name: z_BDG_Test.shopper_events ;;
 
   dimension: capture_method {
@@ -15,6 +15,7 @@ view: shopper_events {
   }
 
   dimension: device_key {
+    primary_key: yes
     type: number
     group_label: "Shopper Events"
     sql: ${TABLE}.device_key ;;
@@ -67,7 +68,7 @@ view: shopper_events {
     value_format_name: decimal_2
     label: "Price"
     type: number
-#    group_label: "Shopper Events"
+   group_label: "Shopper Events"
     sql: sum(${price}) ;;
   }
 
@@ -98,7 +99,7 @@ view: shopper_events {
 
   measure: quantity_sum {
     label: "Quantity"
-#     group_label: "Shopper Events"
+    group_label: "Shopper Events"
     value_format_name: decimal_0
     type: number
     sql: sum(${quantity}) ;;
