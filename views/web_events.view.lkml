@@ -24,6 +24,7 @@ view: web_events {
 
   dimension: dur_minutes {
     type: number
+    hidden: yes
     label: "Duration Minutes"
     group_label: "Web Events"
     sql: ${TABLE}.dur_minutes ;;
@@ -33,6 +34,7 @@ view: web_events {
     type: sum
     group_label: "Web Events"
     label: "Duration Minutes"
+    value_format_name: decimal_2
     sql: ${dur_minutes} ;;
   }
 
