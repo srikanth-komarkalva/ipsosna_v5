@@ -139,7 +139,7 @@ view: shopper_events {
 
   measure: count {
     type: count
-    group_label: "Shopper Events"
+#     group_label: "Shopper Events"
     label: "Count of Shopper Events"
 #     hidden: yes
     drill_fields: [product_name, os_name]
