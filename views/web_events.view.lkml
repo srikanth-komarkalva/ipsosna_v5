@@ -29,6 +29,13 @@ view: web_events {
     sql: ${TABLE}.dur_minutes ;;
   }
 
+  measure: dur_minutes_ {
+    type: sum
+    group_label: "Web Events"
+    label: "Duration Minutes"
+    sql: ${dur_minutes} ;;
+  }
+
   dimension: host_name {
     type: string
     group_label: "Web Events"
@@ -99,7 +106,6 @@ view: web_events {
 
   measure: count {
     type: count
-#     hidden: yes
     group_label: "Web Events"
     label: "Count of Web Events"
     drill_fields: [os_name, domain_name, host_name]

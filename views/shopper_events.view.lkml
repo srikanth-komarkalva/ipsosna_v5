@@ -68,7 +68,7 @@ view: shopper_events {
     value_format_name: decimal_2
     label: "Price"
     type: number
-   group_label: "Shopper Events"
+    group_label: "Shopper Events"
     sql: sum(${price}) ;;
   }
 
@@ -140,14 +140,14 @@ view: shopper_events {
 
   measure: count {
     type: count
-#     group_label: "Shopper Events"
+    group_label: "Shopper Events"
     label: "Count of Shopper Events"
-#     hidden: yes
     drill_fields: [product_name, os_name]
   }
 
   measure: Panelist_count {
     type: count_distinct
+    group_label: "Shopper Events"
     label: "Count of Panelsits"
     sql: ${panelist_key} ;;
 
