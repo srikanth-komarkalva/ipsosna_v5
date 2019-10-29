@@ -144,4 +144,11 @@ view: shopper_events {
 #     hidden: yes
     drill_fields: [product_name, os_name]
   }
+
+  measure: Panelist_count {
+    type: count_distinct
+    label: "Count of Panelsits"
+    sql: ${panelist_key} ;;
+
+  }
 }
