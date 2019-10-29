@@ -53,7 +53,7 @@ view: media_events {
     label: "Media Duration"
     type: sum
     group_label: "Media Events"
-    value_format_name: decimal_2
+    value_format_name: decimal_0
     sql: ${media_duration} ;;
   }
 
@@ -97,7 +97,7 @@ view: media_events {
     label: "Play Duration"
     type: sum
     group_label: "Media Events"
-    value_format_name: decimal_2
+    value_format_name: decimal_0
     sql: ${play_duration} ;;
   }
 

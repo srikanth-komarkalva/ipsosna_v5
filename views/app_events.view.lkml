@@ -33,7 +33,7 @@ view: app_events {
     label: "Duration Minutes"
     type: sum
     group_label: "App Events"
-    value_format_name: decimal_2
+    value_format_name: decimal_0
     sql: ${dur_minutes} ;;
   }
 

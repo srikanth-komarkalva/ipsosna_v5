@@ -34,7 +34,7 @@ view: web_events {
     type: sum
     group_label: "Web Events"
     label: "Duration Minutes"
-    value_format_name: decimal_2
+    value_format_name: decimal_0
     sql: ${dur_minutes} ;;
   }
 
