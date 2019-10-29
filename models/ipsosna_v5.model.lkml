@@ -18,21 +18,21 @@ explore: shopper_events {
   join: media_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: many_to_one
+    relationship: one_to_one
     sql_on: ${shopper_events.device_key} = ${media_events.device_key};;
   }
 
   join: app_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: many_to_one
+    relationship: one_to_one
     sql_on: ${shopper_events.device_key} = ${app_events.device_key};;
   }
 
   join: web_events {
     view_label: "BDG User Explore"
     type: inner
-    relationship: many_to_one
+    relationship: one_to_one
     sql_on: ${shopper_events.device_key} = ${web_events.device_key};;
   }
 }
