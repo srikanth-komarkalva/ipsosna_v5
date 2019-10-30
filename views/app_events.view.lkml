@@ -37,6 +37,15 @@ view: app_events {
     sql: ${dur_minutes} ;;
   }
 
+  measure: dur_minutes_max {
+    label: "Duration Minutes Max"
+    type: max
+    group_label: "App Events"
+    value_format_name: decimal_0
+    sql: ${dur_minutes} ;;
+  }
+
+
   dimension: os_name {
 #     hidden: yes
     group_label: "App Events"
