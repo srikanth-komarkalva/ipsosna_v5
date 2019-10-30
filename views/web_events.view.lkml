@@ -56,6 +56,7 @@ view: web_events {
     primary_key: yes
     group_label: "Web Events"
     type: number
+    label: "Panelist Key(Web)"
     sql: ${TABLE}.panelist_key ;;
   }
 

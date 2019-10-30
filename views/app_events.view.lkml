@@ -64,6 +64,7 @@ view: app_events {
     primary_key: yes
     group_label: "App Events"
     type: number
+    label: "Panelist Key(App)"
     sql: ${TABLE}.panelist_key ;;
   }
 

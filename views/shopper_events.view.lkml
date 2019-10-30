@@ -48,6 +48,7 @@ view: shopper_events {
     type: number
     primary_key: yes
     group_label: "Shopper Events"
+    label: "Panelist Key(Shopper)"
     sql: ${TABLE}.panelist_key ;;
   }
 

@@ -75,6 +75,7 @@ view: media_events {
     type: number
     primary_key: yes
     group_label: "Media Events"
+    label: "Panelist Key(Media)"
     sql: ${TABLE}.panelist_key ;;
   }
 
