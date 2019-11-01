@@ -140,6 +140,11 @@ view: shopper_events {
     sql: CAST(${TABLE}.start_time_local AS TIMESTAMP) ;;
   }
 
+#   dimension: time_from_purchase {
+#     type: duration_hour
+#     sql:  ;;
+#   }
+
   measure: count {
     type: count
     group_label: "Shopper Events"
