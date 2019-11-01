@@ -151,6 +151,7 @@ view: shopper_events {
 
   dimension_group: since_purchase_media_events{
     type: duration
+    label: "Hours Since Purchase (Media events)"
     group_label: "Custom Dimensions"
     intervals: [hour]
     sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
@@ -160,6 +161,7 @@ view: shopper_events {
   dimension_group: since_purchase_web_events {
     type: duration
     group_label: "Custom Dimensions"
+    label: "Hours Since Purchase (Web events)"
     intervals: [hour]
     sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
     sql_end: CAST(web_events.start_time_local AS TIMESTAMP) ;;
