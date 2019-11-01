@@ -151,7 +151,7 @@ view: shopper_events {
 
   dimension_group: since_purchase {
     type: duration
-    group_label: "Developer Custom Dimensions"
+    group_label: "Custom Dimensions"
     intervals: [hour]
     sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
     sql_end: CAST(media_events.start_time_local AS TIMESTAMP) ;;
