@@ -91,6 +91,7 @@ view: app_events {
 
   dimension_group: start_time_local {
     type: time
+    label: "App Time"
     group_label: "App Events"
     timeframes: [
       raw,

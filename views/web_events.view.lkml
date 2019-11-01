@@ -83,6 +83,7 @@ view: web_events {
 
   dimension_group: start_time_local {
     type: time
+    label: "Web Time"
     group_label: "Web Events"
     timeframes: [
       raw,
