@@ -149,13 +149,13 @@ view: shopper_events {
 # #             end);;
 #   }
 
-    dimension_group: since_purchase {
-      type: duration
-      group_label: "Developer Custom Dimensions"
-      intervals: [hour]
-      sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
-      sql_end: CAST(media_events.start_time_local AS TIMESTAMP) ;;
-    }
+  dimension_group: since_purchase {
+    type: duration
+    group_label: "Developer Custom Dimensions"
+    intervals: [hour]
+    sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
+    sql_end: CAST(media_events.start_time_local AS TIMESTAMP) ;;
+  }
 
   measure: count {
     type: count
