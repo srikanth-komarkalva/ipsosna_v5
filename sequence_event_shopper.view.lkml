@@ -83,6 +83,14 @@ view: sequence_event_shopper {
     sql: ${TABLE}.dur_minutes ;;
   }
 
+  measure: dur_minutes_ {
+    type: sum
+    group_label: "Events"
+    label: "Duration Minutes"
+    value_format_name: decimal_0
+    sql: ${dur_minutes} ;;
+  }
+
   dimension: session_id {
     type: number
     sql: ${TABLE}.Session_ID ;;
