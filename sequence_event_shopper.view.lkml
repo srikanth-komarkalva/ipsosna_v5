@@ -101,6 +101,13 @@ view: sequence_event_shopper {
     sql: ${TABLE}.Tax_ID ;;
   }
 
+  measure: count_type {
+    type: count
+    group_label: "Events"
+    label: "Count Events"
+    drill_fields: [digital_type, platform, value, notes]
+  }
+
   set: detail {
     fields: [
       record_id,
