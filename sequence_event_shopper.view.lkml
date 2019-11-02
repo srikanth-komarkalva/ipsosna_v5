@@ -1,5 +1,5 @@
 view: sequence_event_shopper {
-  view_label: "sequence_event_shopper"
+  # view_label: "sequence_event_shopper"
   derived_table: {
     sql: (select Record_ID, panelist_key, 100 as digital_type_id, 'app' as digital_type, App_Name as notes, package_name as value, NULL as search_term_key, Platform, Device_key, start_time_local, dur_minutes, Session_ID, Tax_ID from app_events)
       UNION ALL

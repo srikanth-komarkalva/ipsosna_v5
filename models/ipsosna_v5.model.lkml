@@ -40,10 +40,10 @@ explore: shopper_events {
   explore: sequence_event_shopper {
     label: "BDG User Explore2"
     view_name: sequence_event_shopper
-    view_label: "BDG User Explore2"
+    view_label: "sequence_event_shopper"
 
     join: shopper_events {
-      view_label: "BDG User Explore2"
+      view_label: "shopper_events"
       type: inner
       relationship: one_to_one
       sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
