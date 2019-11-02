@@ -37,12 +37,12 @@ explore: shopper_events {
   }}
 
   explore: sequence_event_shopper {
-    label: "BDG User Explore_shopper"
+    label: "BDG User Explore"
     view_name: sequence_event_shopper
-    view_label: "BDG User Explore_shopper"
+    view_label: "BDG User Explore"
 
     join: shopper_events {
-      view_label: "BDG User Explore_shopper"
+      view_label: "BDG User Explore"
       type: inner
       relationship: one_to_one
       sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
