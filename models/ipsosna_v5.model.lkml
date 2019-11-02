@@ -34,7 +34,8 @@ explore: shopper_events {
     type: inner
     relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${web_events.panelist_key};;
-  }}
+  }
+}
 
   explore: sequence_event_shopper {
     label: "BDG User Explore2"
