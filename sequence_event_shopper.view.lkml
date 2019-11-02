@@ -62,9 +62,20 @@ view: sequence_event_shopper {
     sql: ${TABLE}.Device_key ;;
   }
 
-  dimension_group: start_time_local {
+   dimension_group: start_time_local {
     type: time
-    sql: ${TABLE}.start_time_local ;;
+    label: "Time"
+    group_label: "Time Events"
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: CAST(${TABLE}.start_time_local AS TIMESTAMP) ;;
   }
 
   dimension: dur_minutes {
