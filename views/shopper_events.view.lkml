@@ -126,6 +126,7 @@ view: shopper_events {
 
   dimension_group: start_time_local {
     type: time
+    label: "Purchase Time"
     group_label: "Shopper Events"
     timeframes: [
       raw,
@@ -137,6 +138,35 @@ view: shopper_events {
       year
     ]
     sql: CAST(${TABLE}.start_time_local AS TIMESTAMP) ;;
+  }
+
+#   dimension: time_from_purchase {
+#     type: number
+#     sql: DATETIME_DIFF("${start_time_local_time}","CAST(media_events.start_time_local AS TIMESTAMP)",HOUR);;
+# # AND
+# #             DATETIME_DIFF(${start_time_local_time},media_events.start_time_local_time,HOUR) <=5,
+# #             "YES","FALSE"
+# #             end);;
+#   }
+
+  dimension_group: since_purchase_media_events{
+    type: duration
+    label: "Since Purchase (Media events)"
+    description: "Hours Since Purchase (Media events)"
+    group_label: "Custom Dimensions"
+    intervals: [hour]
+    sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
+    sql_end: CAST(media_events.start_time_local AS TIMESTAMP) ;;
+  }
+
+  dimension_group: since_purchase_web_events {
+    type: duration
+    group_label: "Custom Dimensions"
+    label: "Since Purchase (Web events)"
+    description: "Hours Since Purchase (Web events)"
+    intervals: [hour]
+    sql_start: CAST(shopper_events.start_time_local AS TIMESTAMP) ;;
+    sql_end: CAST(web_events.start_time_local AS TIMESTAMP) ;;
   }
 
   measure: count {

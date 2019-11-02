@@ -110,6 +110,7 @@ view: media_events {
 
   dimension_group: start_time_local {
     type: time
+    label: "Media Time"
     group_label: "Media Events"
     timeframes: [
       raw,
