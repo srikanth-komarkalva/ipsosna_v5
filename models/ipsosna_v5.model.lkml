@@ -17,21 +17,21 @@ explore: shopper_events {
 
   join: media_events {
     view_label: "BDG User Explore"
-    type: full_outer
+    type: inner
     relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${media_events.panelist_key};;
   }
 
   join: app_events {
     view_label: "BDG User Explore"
-    type: full_outer
+    type: inner
     relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${app_events.panelist_key};;
   }
 
   join: web_events {
     view_label: "BDG User Explore"
-    type: full_outer
+    type: inner
     relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${web_events.panelist_key};;
   }}
