@@ -1,7 +1,7 @@
 connection: "bdg1"
 
 # include all the views
-include: "/views/**/*.view"
+include: "/**/*.view"
 
 datagroup: ipsosna_v5_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -17,22 +17,34 @@ explore: shopper_events {
 
   join: media_events {
     view_label: "BDG User Explore"
-    type: inner
-    relationship: one_to_one
+    type: full_outer
+    relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${media_events.panelist_key};;
   }
 
   join: app_events {
     view_label: "BDG User Explore"
-    type: inner
-    relationship: one_to_one
+    type: full_outer
+    relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${app_events.panelist_key};;
   }
 
   join: web_events {
     view_label: "BDG User Explore"
-    type: inner
-    relationship: one_to_one
+    type: full_outer
+    relationship: one_to_many
     sql_on: ${shopper_events.panelist_key} = ${web_events.panelist_key};;
-  }
+  }}
+
+  explore: sequence_event_shopper {
+    label: "BDG User Explore_shopper"
+    view_name: sequence_event_shopper
+    view_label: "BDG User Explore_shopper"
+
+    join: shopper_events {
+      view_label: "BDG User Explore_shopper"
+      type: inner
+      relationship: one_to_one
+      sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
+    }
 }

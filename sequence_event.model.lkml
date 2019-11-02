@@ -19,7 +19,7 @@ explore: sequence_event_shopper {
     view_label: "BDG User Explore_shopper"
     type: inner
     relationship: one_to_one
-    sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id};;
+    sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
   }
 
   }
