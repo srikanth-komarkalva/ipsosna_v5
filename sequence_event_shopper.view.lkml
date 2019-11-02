@@ -64,8 +64,8 @@ view: sequence_event_shopper {
 
    dimension_group: start_time_local {
     type: time
-    label: "Time"
-    group_label: "Time Events"
+    label: "Event"
+    group_label: "Start Time"
     timeframes: [
       raw,
       time,
