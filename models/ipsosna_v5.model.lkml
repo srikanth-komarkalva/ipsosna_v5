@@ -44,7 +44,7 @@ explore: shopper_events {
 
     join: shopper_events {
       view_label: "shopper_events"
-      type: inner
+      type: left_outer
       relationship: one_to_one
       sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
     }
