@@ -21,6 +21,7 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.Domain_Name ;;
+    drill_fields: [host_name]
   }
 
   dimension: dur_minutes {
@@ -43,7 +44,6 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.host_name ;;
-    drill_fields: [domain_name]
   }
 
   dimension: os_name {
@@ -103,7 +103,7 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.subcategory ;;
-    drill_fields: [host_name]
+    drill_fields: [domain_name]
   }
 
   dimension: tax_id {
@@ -125,6 +125,6 @@ view: web_events {
 
   measure: count_distinct_domains {
     type: count_distinct
-    sql: ${TABLE}.Domain_Name ;;
+    sql: ${domain_name} ;;
   }
 }
