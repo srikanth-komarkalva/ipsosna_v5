@@ -23,6 +23,13 @@ view: shopper_events {
   dimension: event_type {
     type: string
     group_label: "Shopper Events"
+    sql: ${TABLE}.EventType ;;
+  }
+
+  dimension: event_type_sorted {
+    type: string
+    label: "Event Type Sorted"
+    group_label: "Shopper Events"
     case: {
       when: {
         sql: ${TABLE}.EventType = 'Search Query' ;;
@@ -45,7 +52,6 @@ view: shopper_events {
         label: "Purchase"
       }
     }
-
   }
 
   dimension: hashed_search_terms {
