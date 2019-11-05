@@ -50,6 +50,6 @@ explore: shopper_events {
     }}
 
   explore: product_category {
-    label: "BDG User Explore2"
+    label: "BDG User Explore3"
     view_name: product_category
     view_label: "product category"}
