@@ -21,6 +21,11 @@ view: product_category {
     drill_fields: [detail*]
   }
 
+  dimension: product_tag_id {
+    type: string
+    sql: ${TABLE}.product_tag_id ;;
+  }
+
   dimension: product_code {
     type: string
     sql: ${TABLE}.ProductCode ;;
@@ -42,6 +47,6 @@ view: product_category {
   }
 
   set: detail {
-    fields: [product_code, product_name, category, tag]
+    fields: [product_tag_id, product_code, product_name, category, tag]
   }
 }
