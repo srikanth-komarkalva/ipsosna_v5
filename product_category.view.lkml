@@ -22,7 +22,7 @@ view: product_category {
   }
 
   dimension: product_tag_id {
-    type: string
+    type: number
     sql: ${TABLE}.product_tag_id ;;
   }
 
