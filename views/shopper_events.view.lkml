@@ -23,7 +23,29 @@ view: shopper_events {
   dimension: event_type {
     type: string
     group_label: "Shopper Events"
-    sql: ${TABLE}.EventType ;;
+    case: {
+      when: {
+        sql: ${TABLE}.EventType = 'Search Query' ;;
+        label: "Search Query"
+      }
+      when: {
+        sql: ${TABLE}.EventType = 'Product Page View' ;;
+        label: "Product Page View"
+      }
+      when: {
+        sql: ${TABLE}.EventType = 'Add to Basket' ;;
+        label: "Add to Basket"
+      }
+      when: {
+        sql: ${TABLE}.EventType = 'Proceed to Checkout' ;;
+        label: "Proceed to Checkout"
+      }
+      when: {
+        sql: ${TABLE}.EventType = 'Purchase' ;;
+        label: "Purchase"
+      }
+    }
+
   }
 
   dimension: hashed_search_terms {
