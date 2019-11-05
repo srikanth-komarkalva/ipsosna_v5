@@ -1,6 +1,7 @@
 view: product_category {
   derived_table: {
-    sql: SELECT ProductCode,
+    sql:SELECT row_number() OVER(order by 1) AS product_tag_id,
+        ProductCode,
         ProductName,
         Category,
         tag
