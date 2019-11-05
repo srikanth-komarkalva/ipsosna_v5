@@ -154,7 +154,7 @@ view: shopper_events {
 
   dimension_group: start_time_local {
     type: time
-    label: "Purchase Time"
+    label: "Event Time"
     group_label: "Shopper Events"
     timeframes: [
       raw,
