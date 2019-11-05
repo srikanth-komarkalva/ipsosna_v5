@@ -105,7 +105,7 @@ view: sequence_event_shopper {
     type: count
     group_label: "Events"
     label: "Count Events"
-    drill_fields: [digital_type, platform, notes, value, start_time_local_time]
+    drill_fields: [platform, digital_type, notes, value, start_time_local_time]
   }
 
   set: detail {
