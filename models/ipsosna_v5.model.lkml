@@ -47,5 +47,9 @@ explore: shopper_events {
       type: left_outer
       relationship: one_to_one
       sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
-    }
-}
+    }}
+
+  explore: product_category {
+    label: "BDG User Explore2"
+    view_name: product_category
+    view_label: "product category"}
