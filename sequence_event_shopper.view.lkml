@@ -87,7 +87,7 @@ view: sequence_event_shopper {
     type: sum
     group_label: "Events"
     label: "Duration Minutes"
-    value_format_name: decimal_0
+    value_format_name: decimal_2
     sql: ${dur_minutes} ;;
   }
 
