@@ -13,6 +13,7 @@ view: app_events {
     group_label: "App Events"
     type: string
     sql: ${TABLE}.category ;;
+    drill_fields: [subcategory]
   }
 
   dimension: device_key {
@@ -110,6 +111,7 @@ view: app_events {
     group_label: "App Events"
     type: string
     sql: ${TABLE}.subcategory ;;
+    drill_fields: [app_name, package_name]
   }
 
   dimension: tax_id {
@@ -124,5 +126,9 @@ view: app_events {
     label: "Count of App Events"
     type: count
     drill_fields: [os_name, app_name, package_name]
+  }
+  measure: count_distinct_apps {
+    type: count_distinct
+    sql: ${app_name} ;;
   }
 }

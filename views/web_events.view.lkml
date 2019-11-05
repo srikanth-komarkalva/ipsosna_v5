@@ -6,6 +6,7 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.category ;;
+    drill_fields: [subcategory]
   }
 
   dimension: device_key {
@@ -20,6 +21,7 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.Domain_Name ;;
+    drill_fields: [host_name]
   }
 
   dimension: dur_minutes {
@@ -101,6 +103,7 @@ view: web_events {
     type: string
     group_label: "Web Events"
     sql: ${TABLE}.subcategory ;;
+    drill_fields: [domain_name]
   }
 
   dimension: tax_id {
@@ -114,5 +117,14 @@ view: web_events {
     group_label: "Web Events"
     label: "Count of Web Events"
     drill_fields: [os_name, domain_name, host_name]
+  }
+  measure: count_distinct_panelists {
+    type: count_distinct
+    sql: ${TABLE}.panelist_key ;;
+  }
+
+  measure: count_distinct_domains {
+    type: count_distinct
+    sql: ${domain_name} ;;
   }
 }
