@@ -53,3 +53,8 @@ explore: shopper_events {
     label: "BDG User Explore3"
     view_name: product_category
     view_label: "product category"}
+
+    explore: product_cat_split {
+      label: "BDG User Explore3"
+      view_name: product_cat_split
+      view_label: "product_cat_split"}
