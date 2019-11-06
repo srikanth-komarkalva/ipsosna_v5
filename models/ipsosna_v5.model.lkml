@@ -47,14 +47,15 @@ explore: shopper_events {
       type: left_outer
       relationship: one_to_one
       sql_on: ${sequence_event_shopper.record_id} = ${shopper_events.record_id} and ${sequence_event_shopper.panelist_key} = ${shopper_events.panelist_key};;
+    }
+
+  join: product_category {
+    type: inner
+    relationship: one_to_many
+    sql_on: ${shopper_events.product_code} = ${product_cat_split.product_code};;}
+
+    join: product_cat_split {
+      type: inner
+      relationship: one_to_many
+      sql_on: ${shopper_events.product_code} = ${product_cat_split.product_code};;
     }}
-
-  explore: product_category {
-    label: "BDG User Explore3"
-    view_name: product_category
-    view_label: "product category"}
-
-    explore: product_cat_split {
-      label: "BDG User Explore4"
-      view_name: product_cat_split
-      view_label: "product_cat_split"}
