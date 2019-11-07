@@ -201,7 +201,7 @@ view: shopper_events {
     type: count
     group_label: "Shopper Events"
     label: "Count of Shopper Events"
-    drill_fields: [product_name, retailer, os_name, start_time_local_date]
+    drill_fields: [event_type, product_name, retailer, os_name, start_time_local_date]
   }
 
   measure: Panelist_count {
