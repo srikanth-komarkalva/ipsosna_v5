@@ -208,7 +208,7 @@ view: shopper_events {
     type: count_distinct
     group_label: "Shopper Events"
     label: "Count of Panelists"
-    drill_fields: [panelist_key,product_name, retailer, os_name, start_time_local_date]
+    drill_fields: [panelist_key, platform, os_name]
     sql: ${panelist_key} ;;
   }
 }
