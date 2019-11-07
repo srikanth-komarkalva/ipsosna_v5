@@ -199,7 +199,7 @@ view: shopper_events {
 
   measure: count {
     type: number
-    sql: COUNT(${TABLE}.record_id)
+    sql: COUNT(${TABLE}.record_id) ;;
     group_label: "Shopper Events"
     label: "Count of Shopper Events"
     drill_fields: [event_type, product_name, retailer]
