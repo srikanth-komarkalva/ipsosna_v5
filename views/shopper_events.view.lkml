@@ -201,7 +201,7 @@ view: shopper_events {
     type: count
     group_label: "Shopper Events"
     label: "Count of Shopper Events"
-    drill_fields: [event_type, product_name, retailer]
+    drill_fields: [record_id, event_type, product_name, retailer]
   }
 
   measure: Panelist_count {
