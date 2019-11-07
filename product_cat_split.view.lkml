@@ -64,7 +64,7 @@ view: product_cat_split {
   dimension: cat1 {
     type: string
     sql: ${TABLE}.cat1 ;;
-    drill_fields: [product_name, category]
+    drill_fields: [product_name, cat2]
   }
 
   dimension: cat2 {
