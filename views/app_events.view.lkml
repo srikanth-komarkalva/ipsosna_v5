@@ -131,4 +131,8 @@ view: app_events {
     type: count_distinct
     sql: ${app_name} ;;
   }
+  measure: count_distinct_panelists {
+    type: count_distinct
+    sql: ${panelist_key} ;;
+  }
 }
